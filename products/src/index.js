@@ -1,10 +1,3 @@
-import { faker } from '@faker-js/faker'
-
-let products = ''
-
-for (let i = 0; i < 5; i++) {
-    const name = faker.commerce.productName()
-    products += `<div>${name}</div>`
-}
-
-document.querySelector('#dev-products').innerHTML = products
+import('./bootstrap') 
+//Это потому что мы шарим либу faker-а, и он становится асинхронным. Поэтому нам нужно сделать так, чтобы наш код тоже был асинхронным, 
+//и сказать вебпаку чтобы он при запуске этого кода не загрузил faker
