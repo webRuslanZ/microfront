@@ -8,7 +8,7 @@ module.exports = {
     },
     plugins: [
         new ModuleFederationPlugin({
-            name: 'products',
+            name: 'products', //название переменной в remoteEntry.js
             filename: 'remoteEntry.js',
             exposes: {
                 './ProductsIndex': './src/bootstrap.js'
