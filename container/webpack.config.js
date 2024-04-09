@@ -10,6 +10,7 @@ module.exports = {
         new ModuleFederationPlugin({
             name: 'container',
             remotes: {
+                //products и cart перед @ - это название переменной в remoteEntry, для доступа к коду из удаленного фронта
                 products: 'products@http://localhost:8081/remoteEntry.js',
                 cart: 'cart@http://localhost:8082/remoteEntry.js',
             }
